@@ -1,0 +1,2 @@
+#!/bin/bash
+gcloud compute instances create example-host --zone=us-central1-a

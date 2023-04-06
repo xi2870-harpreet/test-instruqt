@@ -1,0 +1,6 @@
+#!/bin/bash
+instanceName=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=example-host" | jq -r '.Reservations[0].Instances[0].Tags | length')
+
+if [[ $instanceName -lt 1 ]]; then
+  fail-message 'Please create a ec2 instance with host name example-host'
+fi

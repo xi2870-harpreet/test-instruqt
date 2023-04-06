@@ -1,0 +1,35 @@
+version: "3"
+containers:
+- name: cloud-client
+  image: gcr.io/instruqt/cloud-client
+  shell: /bin/bash
+  ports:
+  - 80
+gcp_projects:
+- name: gcpproject
+  services:
+  - compute.googleapis.com
+  - container.googleapis.com
+  - iam.googleapis.com
+  roles:
+  - roles/owner
+aws_accounts:
+- name: aws-iam-track
+  iam_policy: |-
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+            "Sid":"EC2DefaultAllow",
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+      ]
+    }
+  managed_policies:
+  - arn:aws:iam::aws:policy/IAMFullAccess
+azure_subscriptions:
+- name: azuresubscription
+  roles:
+  - Owner

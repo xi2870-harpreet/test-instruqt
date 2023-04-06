@@ -1,0 +1,26 @@
+slug: cloud-accounts-new
+id: 4tyxfiismjsd
+title: Cloud Accounts
+teaser: Learn how to build tracks with an Cloud account
+description: |
+  Learn how to use a sandboxed Cloud account in your Instruqt track.
+
+  **This track demonstrates how to:**
+    - Link an  cloud account to your sandbox
+    - How to use the cloud client Docker container
+    - Use the Cloud CLI and UI from our learn environment
+icon: https://cdn.instruqt.com/assets/templates/aws.png
+tags:
+- Cloud Account
+owner: instruqt-support
+developers:
+- harpreet@instruqt.com
+maintenance: true
+show_timer: true
+skipping_enabled: true
+timelimit: 3600
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "9824132627467871252"

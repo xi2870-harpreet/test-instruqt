@@ -1,0 +1,2 @@
+az group create --name test-gr -l centralindia
+az vm create --resource-group test-gr  --name test-vm  --image microsoftwindowsdesktop:windows-11:win11-21h2-pro:22000.1574.230207  --size Standard_D4ds_v4  --admin-username instruqt --admin-password test@12345678

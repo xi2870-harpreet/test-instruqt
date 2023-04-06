@@ -1,0 +1,6 @@
+#!/bin/bash
+instanceName=$(gcloud compute instances list --format='table(name)' --filter="name:example-host" | wc -l)
+
+if [[ $instanceName -lt 1 ]]; then
+  fail-message 'Please create a instance with host name example-host'
+fi

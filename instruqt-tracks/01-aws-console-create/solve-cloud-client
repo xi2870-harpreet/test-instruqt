@@ -1,0 +1,2 @@
+#!/bin/bash
+aws ec2 run-instances --image-id ami-0beaa649c482330f7 --instance-type t2.nano --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=example-host}]'
